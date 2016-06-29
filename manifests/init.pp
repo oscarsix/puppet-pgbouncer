@@ -90,7 +90,7 @@ class pgbouncer (
   $restart_cmd     = '/etc/init.d/pgbouncer reload',
   $service_ensure  = 'running',
   $service_enable  = true,
-  $version         = '1.5.5-1.pgdg12.4+1',
+  $version         = 'installed',
   ) {
 
   validate_hash($databases)
