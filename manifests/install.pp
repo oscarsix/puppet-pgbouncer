@@ -7,7 +7,6 @@ class pgbouncer::install (
   package {
     'pgbouncer':
       ensure   => $version,
-      provider => 'aptitude',
   }
 
   file {
