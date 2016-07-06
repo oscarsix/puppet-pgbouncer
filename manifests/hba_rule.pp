@@ -84,8 +84,8 @@ define pgbouncer::hba_rule(
     fail('You must specify an address property when type is host based')
   }
 
-  validate_re($auth_method, '^(trust|reject|md5|password|peer|cert)$',
-  "The auth_method you specified [${auth_method}] must be one of: trust, reject, md5, password, peer, cert")
+  validate_re($auth_method, '^(trust|reject|md5|password|peer|cert|ident)$',
+  "The auth_method you specified [${auth_method}] must be one of: trust, reject, md5, password, peer, cert, ident")
 
   if is_array($database) {
     $databases = join($database, ',')
